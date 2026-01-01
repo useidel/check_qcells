@@ -73,7 +73,7 @@ get_battery_soc()
 # QCELLS -> https://qhome-ess-g3.q-cells.eu/proxyApp/proxy/api/getRealtimeInfo.do?tokenId=APIKEY&sn=INVERTER_SN
 # SOLAX -> https://www.solaxcloud.com/proxyApp/proxy/api/getRealtimeInfo.do?tokenId=APIKEY&sn=INVERTER_SN
 #
-MYBATTSOC=`curl -X GET "https://qhome-ess-g3.q-cells.eu/proxyApp/proxy/api/getRealtimeInfo.do?tokenId=${MYAPIKEY}&sn=${MYINVERTER}"|awk -F"soc" '{ print $2 }'|cut -f1 -d","|cut -f2 -d":"|cut -f1 -d"."`
+MYBATTSOC=`curl -s -X GET "https://qhome-ess-g3.q-cells.eu/proxyApp/proxy/api/getRealtimeInfo.do?tokenId=${MYAPIKEY}&sn=${MYINVERTER}"|awk -F"soc" '{ print $2 }'|cut -f1 -d","|cut -f2 -d":"|cut -f1 -d"."`
 # the variable will be empty in case of missing file or access to it
 echo $MYBATTSOC | grep '[0-9]' > /dev/null
 if [ $? -ne 0 ]; then
