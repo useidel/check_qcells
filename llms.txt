@@ -1,0 +1,27 @@
+# check_qcells
+
+> A Nagios/Icinga plugin for checking the state of charge of a PV plant battery.
+
+The shell plugin queries inverter battery information through an API and reports warning and critical levels for battery state of charge. It requires curl and bc.
+
+## Repository overview
+
+- [Source repository](https://github.com/useidel/check_qcells): Canonical GitHub repository, including source files, issues, history, and repository metadata.
+- [README](https://raw.githubusercontent.com/useidel/check_qcells/HEAD/README.md): Primary project documentation and usage notes.
+
+## Topics
+
+- Nagios
+- Icinga
+- PV plant
+- Battery monitoring
+- Shell
+
+## Additional resources
+
+- [Main plugin script](https://raw.githubusercontent.com/useidel/check_qcells/HEAD/check_qcells.sh)
+
+## Optional
+
+- [Repository activity](https://github.com/useidel/check_qcells/commits): Commit history for implementation changes and maintenance context.
+- [Issues](https://github.com/useidel/check_qcells/issues): Questions, bug reports, and project discussions when enabled.
